@@ -3,7 +3,7 @@ require 'rubygems' unless Object.const_defined?(:Gem)
 require File.dirname(__FILE__) + "/lib/hirb/version"
 
 Gem::Specification.new do |s|
-  s.name        = "hirb"
+  s.name        = "hirber"
   s.version     = Hirb::VERSION
   s.authors     = ["Gabriel Horner"]
   s.email       = "gabriel.horner@gmail.com"
