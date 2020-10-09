@@ -17,9 +17,7 @@ generating ascii tables and trees. Using Hirb::Helpers::AutoTable, hirb has
 useful default views for at least ten popular database gems i.e. Rails'
 ActiveRecord::Base. Other than views, hirb offers a smart pager and a console
 menu. The smart pager only pages when the output exceeds the current screen
-size. The menu is used in conjunction with tables to offer [two dimensional
-menus](http://tagaholic.me/2010/02/16/two-dimensional-console-menus-with-hirb.
-html).
+size. The menu is used in conjunction with tables to offer [two dimensional menus](http://tagaholic.me/2010/02/16/two-dimensional-console-menus-with-hirb.html).
 
 ## Install
 
@@ -34,11 +32,8 @@ For people using full-width unicode characters, install
 
 ## View Tutorials
 
-*   To create and configure views, see Hirb::View or [here if on the
-    web](http://tagaholic.me/hirb/doc/classes/Hirb/View.html).
-*   To create dynamic views, see Hirb::DynamicView or [here if on the
-    web](http://tagaholic.me/hirb/doc/classes/Hirb/DynamicView.html).
-
+* To create and configure views, see Hirb::View or [here if on the web](http://tagaholic.me/hirb/doc/classes/Hirb/View.html).
+* To create dynamic views, see Hirb::DynamicView or [here if on the web](http://tagaholic.me/hirb/doc/classes/Hirb/DynamicView.html).
 
 ## Printing Ascii Tables
 
@@ -114,6 +109,7 @@ At any time you can disable Hirb if you really like irb's lovely echo mode:
     00:30:10", namespace: "article", predicate: "tags", value: "ruby">]
 
 ## Views: Anytime, Anywhere
+
 While preconfigured tables are great for database records, sometimes you just
 want to create tables/views for any output object:
 
@@ -198,16 +194,19 @@ or toggle their state at runtime:
     Hirb::View.toggle_formatter
 
 ## Sharing Helpers and Views
+
 If you have tested helpers you'd like to share, fork Hirb and put them under
 lib/hirb/helpers. To share views for certain classes, put them under
 lib/hirb/views. Please submit views for gems that have a nontrivial number of
 users.
 
 ## Limitations
+
 If using Wirble and irb, you should call Hirb after it since they both
 override irb's default output.
 
 ## Motivation
+
 Table code from http://gist.github.com/72234 and [my console app's needs](http://github.com/cldwalker/tag-tree).
 
 ## Credits
@@ -219,6 +218,7 @@ Table code from http://gist.github.com/72234 and [my console app's needs](http:/
 
 
 ## Bugs/Issues
+
 Please report them [on github](http://github.com/cldwalker/hirb/issues).
 
 ## Contributing
