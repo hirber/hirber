@@ -43,8 +43,7 @@ To print ascii tables from an array of arrays, hashes or any objects:
 
 Hirb will intelligently pick up on field names from an array of hashes and
 create properly-aligned fields from an array of arrays. See
-[here](http://tagaholic.me/2009/10/15/boson-and-hirb-interactions.html#hirbs_h
-andy_tables) for examples.
+[here](http://tagaholic.me/2009/10/15/boson-and-hirb-interactions.html#hirbs_handy_tables) for examples.
 
 ## Rails Example
 
