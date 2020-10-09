@@ -183,8 +183,20 @@ module Hirb
           @output_method = true
           ::IRB::Irb.class_eval do
             alias_method :non_hirb_view_output, :output_value
-            def output_value #:nodoc:
-              Hirb::View.view_or_page_output(@context.last_value) || non_hirb_view_output
+
+            def output_value(omit = false) #:nodoc:
+              Hirb::View.view_or_page_output(@context.last_value) ||
+                original_output_value(omit)
+            end
+
+            # Do not pass the value if the default is given to keep backwards
+            # compatiblity for Ruby =< 2.7.1
+            def original_output_value(omit)
+              if omit
+                non_hirb_view_output(omit)
+              else
+                non_hirb_view_output
+              end
             end
           end
         end
