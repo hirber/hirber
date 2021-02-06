@@ -31,6 +31,7 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = ">= 1.3.5"
 
+  s.add_development_dependency "rake"
   s.add_development_dependency "bacon", "~> 1.1"
   s.add_development_dependency "mocha", "~> 0.12.1"
   s.add_development_dependency "mocha-on-bacon", "~> 0.2.1"
