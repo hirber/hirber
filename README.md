@@ -1,3 +1,5 @@
+![build passing](https://circleci.com/gh/hirber/hirber.svg?style=svg)
+
 ## Preface
 
 This gem is a direct fork of [Hirb](https://github.com/cldwalker/hirb) (0.7.3)
