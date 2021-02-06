@@ -9,9 +9,9 @@ jobs:
     steps:
       - checkout
       - run:
-          name: Which bundler?
-          command: bundle -v
+          name: Install gems
+          command: bundle install
 
       - run:
           name: Run tests
-          command: bundle exec rake spec
+          command: bundle exec rake test
