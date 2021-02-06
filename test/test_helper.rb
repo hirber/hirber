@@ -1,12 +1,16 @@
-require 'bacon'
-require 'bacon/bits'
-require 'mocha-on-bacon'
-require 'hirb'
+require "bacon"
+require "bacon/bits"
+require "mocha-on-bacon"
+require "hirber"
+
 include Hirb
 
 module TestHelpers
-  # set these to avoid invoking stty multiple times which doubles test suite running time
+  # set these to avoid invoking stty multiple times which doubles
+  # test suite running time
+
   ENV["LINES"] = ENV["COLUMNS"] = "20"
+
   def reset_terminal_size
     ENV["LINES"] = ENV["COLUMNS"] = "20"
   end
