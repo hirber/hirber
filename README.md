@@ -23,7 +23,7 @@ size. The menu is used in conjunction with tables to offer [two dimensional menu
 
 Install the gem with:
 
-    gem install hirb
+    gem install hirber
 
 For people using full-width unicode characters, install
 [hirb-unicode](https://github.com/miaout17/hirb-unicode):
