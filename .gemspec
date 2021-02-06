@@ -10,12 +10,12 @@ Gem::Specification.new do |s|
   s.email       = "ad@dotpro.org"
   s.homepage    = "http://tagaholic.me/hirb/"
 
-  s.summary     = <<~TXT.squish
+  s.summary     = <<~TXT.gsub(/[[:space:]]+/, " ").strip
     A mini view framework for console/irb that's easy to use, even while under
     its influence.
   TXT
 
-  s.description = <<~TXT.squish
+  s.description = <<~TXT.gsub(/[[:space:]]+/, " ").strip
     Hirb provides a mini view framework for console applications and uses
     it to improve ripl(irb)'s default inspect output. Given an object or
     array of objects, hirb renders a view based on the object's class and/or
