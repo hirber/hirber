@@ -1,3 +1,6 @@
+== 0.8.4
+* Fix version number issues
+
 == 0.8.3
 * Add autoloading support for pry-rails
 
