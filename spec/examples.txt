@@ -1,0 +1,5 @@
+example_id                  | status | run_time        |
+--------------------------- | ------ | --------------- |
+./spec/views_spec.rb[1:1:1] | passed | 0.00013 seconds |
+./spec/views_spec.rb[1:2:1] | passed | 0.00014 seconds |
+./spec/views_spec.rb[2:1]   | passed | 0.00071 seconds |
