@@ -1,9 +1,15 @@
 require "spec_helper"
 require "hirber"
 
-Hirb.enable
-
 RSpec.describe "activerecord table" do
+  before do
+    Hirb.enable
+  end
+
+  after do
+    Hirb.disable
+  end
+
   context "with no select" do
     let(:pet) do
       double(
