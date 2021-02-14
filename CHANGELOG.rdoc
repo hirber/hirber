@@ -1,3 +1,9 @@
+== 0.8.3
+* Add autoloading support for pry-rails
+
+== 0.8.1
+* Add compatiblity with Ruby 3.0.0
+
 == 0.7.3
 * Remove warnings
 
