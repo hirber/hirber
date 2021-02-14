@@ -1,0 +1,17 @@
+version: 2.1
+orbs:
+  ruby: circleci/ruby@0.1.2
+
+jobs:
+  build:
+    docker:
+      - image: circleci/ruby:3.0.0
+    steps:
+      - checkout
+      - run:
+          name: Install gems
+          command: bundle install
+
+      - run:
+          name: Run tests
+          command: bundle exec rake test
