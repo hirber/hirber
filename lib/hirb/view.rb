@@ -108,17 +108,25 @@ module Hirb
         config[:formatter] = !config[:formatter]
       end
 
-      # Resizes the console width and height for use with the table and pager i.e. after having resized the console window. *nix users
-      # should only have to call this method. Non-*nix users should call this method with explicit width and height. If you don't know
-      # your width and height, in irb play with "a"* width to find width and puts "a\n" * height to find height.
+      # Resizes the console width and height for use with the table and pager
+      # i.e. after having resized the console window. *nix users should only
+      # have to call this method. Non-*nix users should call this method with
+      # explicit width and height. If you don't know your width and height, in
+      # irb play with "a"* width to find width and puts "a\n" * height to find
+      # height.
+
       def resize(width=nil, height=nil)
         config[:width], config[:height] = determine_terminal_size(width, height)
         pager.resize(config[:width], config[:height])
       end
 
-      # This is the main method of this class. When view is enabled, this method searches for a formatter it can use for the output and if
-      # successful renders it using render_method(). The options this method takes are helper config hashes as described in
-      # Hirb::Formatter.format_output(). Returns true if successful and false if no formatting is done or if not enabled.
+      # This is the main method of this class. When view is enabled,
+      # this method searches for a formatter it can use for the output
+      # and if successful renders it using render_method(). The options
+      # this method takes are helper config hashes as described in
+      # Hirb::Formatter.format_output(). Returns true if successful and false
+      # if no formatting is done or if not enabled.
+
       def view_output(output, options={})
         enabled? && config[:formatter] && render_output(output, options)
       rescue Exception=>e
@@ -188,9 +196,15 @@ module Hirb
               original_print.call(output, result, pry_instance)
           end
 
-        elsif defined? IRB::Irb
+        elsif defined?(IRB::Irb)
           @output_method = true
+
           ::IRB::Irb.class_eval do
+            if respond_to?(:non_hirb_view_output)
+              undef non_hirb_view_output
+              undef original_output_value
+            end
+
             alias_method :non_hirb_view_output, :output_value
 
             def output_value(omit = false) #:nodoc:
@@ -212,7 +226,7 @@ module Hirb
       end
 
       def disable_output_method
-        if defined?(IRB::Irb) && !defined? Ripl
+        if defined?(IRB::Irb) && !defined?(Ripl)
           ::IRB::Irb.send :alias_method, :output_value, :non_hirb_view_output
         end
         @output_method = nil
