@@ -1,9 +1,9 @@
 require "spec_helper"
-require "hirb"
+require "hirber"
 
 Hirb.enable
 
-describe "activerecord table" do
+RSpec.describe "activerecord table" do
   context "with no select" do
     let(:pet) do
       double(
@@ -37,7 +37,7 @@ describe "activerecord table" do
   end
 end
 
-describe "mongoid table" do
+RSpec.describe "mongoid table" do
   let(:mongoid_stub) { double(class: double(fields: fields)) }
   let(:fields) { {"_id" => "x0f0x", "name" => "blah"} }
 
