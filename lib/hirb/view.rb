@@ -200,11 +200,6 @@ module Hirb
           @output_method = true
 
           ::IRB::Irb.class_eval do
-            if respond_to?(:non_hirb_view_output)
-              undef non_hirb_view_output
-              undef original_output_value
-            end
-
             alias_method :non_hirb_view_output, :output_value
 
             def output_value(omit = false) #:nodoc:
@@ -214,11 +209,14 @@ module Hirb
 
             # Do not pass the value if the default is given to keep backwards
             # compatiblity for Ruby =< 2.7.1
-            def original_output_value(omit)
-              if omit
-                non_hirb_view_output(omit)
-              else
-                non_hirb_view_output
+
+            if !instance_methods(false).include?(:original_output_value)
+              def original_output_value(omit)
+                if omit
+                  non_hirb_view_output(omit)
+                else
+                  non_hirb_view_output
+                end
               end
             end
           end
@@ -227,7 +225,11 @@ module Hirb
 
       def disable_output_method
         if defined?(IRB::Irb) && !defined?(Ripl)
-          ::IRB::Irb.send :alias_method, :output_value, :non_hirb_view_output
+          ::IRB::Irb.class_eval do
+            undef output_value
+
+            alias_method :output_value, :non_hirb_view_output
+          end
         end
         @output_method = nil
       end
