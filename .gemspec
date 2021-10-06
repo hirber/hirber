@@ -6,8 +6,8 @@ Gem::Specification.new do |s|
   s.name        = "hirber"
   s.version     = Hirb::VERSION
 
-  s.authors     = ["Gabriel Horner", "Aleksander Długopolski"]
-  s.email       = "ad@dotpro.org"
+  s.authors     = ["Gabriel Horner", "Aleksander Długopolski", "Marz Drel"]
+  s.email       = "marzdrel@dotpro.org"
   s.homepage    = "http://tagaholic.me/hirb/"
 
   s.summary     = <<~TXT.gsub(/[[:space:]]+/, " ").strip
