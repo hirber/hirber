@@ -148,7 +148,9 @@ RSpec.describe "Hirb::View" do
         .and_raise(Exception, "Ex mesg")
         .twice
 
-      expect(Hirb::View.view_output("")).to eq(false)
+      capture_stderr do
+        expect(Hirb::View.view_output("")).to eq(false)
+      end
 
       expect(capture_stderr { Hirb::View.view_output("") })
         .to match(/Error: Ex mesg/)
