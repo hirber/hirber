@@ -134,6 +134,16 @@ RSpec.describe "Hirb::View" do
       expect(Hirb::View.formatter.config.size).to be > 1
     end
 
+    it "sets up configuration for IRB and Pry if they're both defined" do
+      Hirb.disable
+      expect(Pry.config).to receive(:print=)
+      expect {
+        Hirb.enable
+      }.to change {
+        ::IRB::Irb.instance_method(:output_value) == ::IRB::Irb.instance_method(:non_hirb_view_output)
+      }.from(true).to(false)
+    end
+
     it "with config_file option adds to config_file" do
       Hirb.enable :config_file => "test_file"
 

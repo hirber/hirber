@@ -33,6 +33,8 @@ module ::IRB
   end
 end
 
+require "pry"
+
 RSpec.configure do |config|
   include RSpec::Helpers
 
