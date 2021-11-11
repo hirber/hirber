@@ -187,16 +187,18 @@ module Hirb
         if defined?(Ripl) && Ripl.respond_to?(:started?) && Ripl.started?
           @output_method = true
           require 'ripl/hirb' unless defined? Ripl::Hirb
+        end
 
-        elsif defined? Pry
+        if defined? Pry
           original_print = Pry.config.print
 
           Pry.config.print = proc do |output, result, pry_instance|
             Hirb::View.view_or_page_output(result) ||
               original_print.call(output, result, pry_instance)
           end
+        end
 
-        elsif defined?(IRB::Irb)
+        if defined?(IRB::Irb)
           @output_method = true
 
           ::IRB::Irb.class_eval do
