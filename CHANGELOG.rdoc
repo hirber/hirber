@@ -1,3 +1,6 @@
+== 0.8.5
+* Fix issues with loading Hirber when using Pry
+
 == 0.8.4
 * Fix version number issues
 
