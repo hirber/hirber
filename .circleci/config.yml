@@ -11,7 +11,8 @@ jobs:
     steps:
       - checkout
 
-      - ruby/install-deps
+      - ruby/install-deps:
+          clean-bundle: true
 
       - run:
           name: Run bacon tests
