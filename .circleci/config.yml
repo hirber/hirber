@@ -1,12 +1,17 @@
+---
 version: 2.1
 
 orbs:
   ruby: circleci/ruby@2.0.0
 
 jobs:
-  build:
+  test:
+    parameters:
+      ruby-version:
+        type: string
+
     docker:
-      - image: cimg/ruby:3.0.0
+      - image: cimg/ruby:<< parameters.ruby-version >>
 
     steps:
       - checkout
@@ -19,3 +24,12 @@ jobs:
           command: bundle exec rake test
 
       - ruby/rspec-test
+
+workflows:
+  build_and_test:
+    jobs:
+      - test:
+          matrix:
+            parameters:
+              ruby-version:
+                - 3.0.0
