@@ -10,14 +10,11 @@ jobs:
 
     steps:
       - checkout
-      - run:
-          name: Install gems
-          command: bundle install
+
+      - ruby/install-deps
 
       - run:
           name: Run bacon tests
           command: bundle exec rake test
 
-      - run:
-          name: Run RSpec tests
-          command: bundle exec rspec
+      - ruby/rspec-test
