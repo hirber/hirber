@@ -1,4 +1,4 @@
-![build passing](https://circleci.com/gh/hirber/hirber.svg?style=svg)
+[![CircleCI](https://circleci.com/gh/hirber/hirber.svg?style=shield)](https://circleci.com/gh/hirber/hirber)
 
 ## Preface
 
