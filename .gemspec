@@ -34,6 +34,7 @@ Gem::Specification.new do |s|
   s.add_development_dependency "rake"
   s.add_development_dependency "pry"
   s.add_development_dependency "rspec", ">= 3.9"
+  s.add_development_dependency "rspec_junit_formatter"
   s.add_development_dependency "bacon", "~> 1.1"
   s.add_development_dependency "mocha", "~> 0.12.1"
   s.add_development_dependency "mocha-on-bacon", "~> 0.2.1"
