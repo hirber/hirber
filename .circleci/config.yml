@@ -5,7 +5,8 @@ orbs:
 jobs:
   build:
     docker:
-      - image: circleci/ruby:3.0.0
+      - image: cimg/ruby:3.0.0
+
     steps:
       - checkout
       - run:
