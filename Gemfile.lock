@@ -1,0 +1,53 @@
+PATH
+  remote: .
+  specs:
+    hirber (0.8.5)
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    bacon (1.2.0)
+    bacon-bits (0.1.0)
+      bacon (>= 1.1.0)
+    coderay (1.1.3)
+    diff-lcs (1.5.0)
+    metaclass (0.0.4)
+    method_source (1.0.0)
+    mocha (0.12.10)
+      metaclass (~> 0.0.1)
+    mocha-on-bacon (0.2.1)
+      mocha (>= 0.9.8)
+    pry (0.14.1)
+      coderay (~> 1.1)
+      method_source (~> 1.0)
+    rake (13.0.6)
+    rspec (3.12.0)
+      rspec-core (~> 3.12.0)
+      rspec-expectations (~> 3.12.0)
+      rspec-mocks (~> 3.12.0)
+    rspec-core (3.12.0)
+      rspec-support (~> 3.12.0)
+    rspec-expectations (3.12.1)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.12.0)
+    rspec-mocks (3.12.1)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.12.0)
+    rspec-support (3.12.0)
+
+PLATFORMS
+  arm64-darwin-20
+  arm64-darwin-22
+
+DEPENDENCIES
+  bacon (~> 1.1)
+  bacon-bits (~> 0.1)
+  hirber!
+  mocha (~> 0.12.1)
+  mocha-on-bacon (~> 0.2.1)
+  pry
+  rake
+  rspec (>= 3.9)
+
+BUNDLED WITH
+   2.4.1
