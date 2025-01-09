@@ -598,15 +598,29 @@ TABLE
     end
 
     it "filter_any option filters any value" do
-      expected_table = <<-TABLE.unindent
-      +---------+
-      | a       |
-      +---------+
-      | {:b=>1} |
-      | 2       |
-      +---------+
-      2 rows in set
-      TABLE
+      expected_table =
+        if RUBY_VERSION >= "3.4.0"
+          <<-TABLE.unindent
+            +--------+
+            | a      |
+            +--------+
+            | {b: 1} |
+            | 2      |
+            +--------+
+            2 rows in set
+          TABLE
+        else
+          <<-TABLE.unindent
+            +---------+
+            | a       |
+            +---------+
+            | {:b=>1} |
+            | 2       |
+            +---------+
+            2 rows in set
+          TABLE
+        end
+
       table([{:a=>{:b=>1}}, {:a=>2}], :filter_any=>true).should == expected_table
     end
 
