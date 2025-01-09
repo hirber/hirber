@@ -3,10 +3,12 @@
 ## Preface
 
 This gem is a direct fork of [Hirb](https://github.com/cldwalker/hirb) (0.7.3)
-which appears to be unmaintained since 2015. New release of Ruby (2.7.2)
+which appears to be unmaintained since 2015. Release of Ruby (2.7.2)
 introduced a breaking change into one of the methods in IRB module, which made
 this Gem partially unusable. This fork aims to fix incompatibility. Feel free
 to open PRs if you have any ideas to extend the functionality.
+
+This gem works with Ruby 2.7.2 up to 3.4.1.
 
 ## Description
 
