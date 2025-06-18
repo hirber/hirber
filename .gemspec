@@ -6,9 +6,9 @@ Gem::Specification.new do |s|
   s.name        = "hirber"
   s.version     = Hirb::VERSION
 
-  s.authors     = ["Gabriel Horner", "Aleksander Długopolski", "Marz Drel"]
+  s.authors     = ["Gabriel Horner", "Marz Drel"]
   s.email       = "marzdrel@dotpro.org"
-  s.homepage    = "http://tagaholic.me/hirb/"
+  s.homepage    = "https://github.com/hirber/hirber"
 
   s.summary     = <<~TXT.gsub(/[[:space:]]+/, " ").strip
     A mini view framework for console/irb that's easy to use, even while under
