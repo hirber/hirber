@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 class Hirb::Helpers::Table
   # Resizes a table's fields to the table's max width.
   class Resizer

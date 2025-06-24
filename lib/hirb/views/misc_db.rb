@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 module Hirb::Views::MiscDb #:nodoc:
   def friendly__document_view(obj)
     {:fields=>obj.class.attributes.keys - [:id]}

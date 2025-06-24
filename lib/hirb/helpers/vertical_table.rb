@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 class Hirb::Helpers::VerticalTable < Hirb::Helpers::Table
 
   # Renders a vertical table using the same options as Hirb::Helpers::Table.render except for the ones below

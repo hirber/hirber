@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 module Hirb
   module Helpers #:nodoc:
     @helper_classes ||= {}

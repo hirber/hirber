@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 class Hirb::Helpers::TabTable < Hirb::Helpers::Table
   DELIM = "\t"
 

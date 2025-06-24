@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 module Hirb::Views::ORM #:nodoc:
   def data_mapper__resource_view(obj)
     {:fields=>obj.class.properties.map {|e| e.name }}

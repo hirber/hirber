@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 module Hirb
   # This module is meant to be extended to provide methods for use in a console/irb shell.
   # For example:

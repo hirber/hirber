@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 module Hirb
   # This class provides a menu using Hirb's table helpers by default to display choices.
   # Menu choices (syntax at Hirb::Util.choose_from_array) refer to rows. However, when in

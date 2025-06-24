@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 module Hirb
   # This module extends a Helper with the ability to have dynamic views for configured output classes.
   # After a Helper has extended this module, it can use it within a render() by calling

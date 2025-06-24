@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 # Base tree class which given an array of nodes produces different types of trees.
 # The types of trees currently are:
 # * basic:

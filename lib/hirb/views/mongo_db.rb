@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 module Hirb::Views::MongoDb #:nodoc:
   def mongoid__document_view(obj)
     fields = obj.class.fields.keys

@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 module Hirb
   # This class provides class methods for paging and an object which can conditionally page given a terminal size that is exceeded.
   class Pager

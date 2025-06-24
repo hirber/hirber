@@ -1,4 +1,5 @@
 # -*- encoding : utf-8 -*-
+# frozen_string_literal: true
 require 'hirb/helpers/table/filters'
 require 'hirb/helpers/table/resizer'
 

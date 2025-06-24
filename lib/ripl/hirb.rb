@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 require 'hirb'
 
 module Ripl::Hirb

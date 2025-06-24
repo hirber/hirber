@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 class Hirb::Helpers::ParentChildTree < Hirb::Helpers::Tree
   class <<self
     # Starting with the given node, this builds a tree by recursively calling a children method.

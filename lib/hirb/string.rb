@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 module Hirb
   # Provides string helpers to deal with UTF-8 and ruby 1.8.x
   module String

@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 # Needed by Hirb::String to handle multibyte characters
 $KCODE = 'u' if RUBY_VERSION < '1.9'
 

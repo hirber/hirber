@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 class Hirb::Helpers::ObjectTable < Hirb::Helpers::Table
   # Rows are any ruby objects. Takes same options as Hirb::Helpers::Table.render except as noted below.
   #
