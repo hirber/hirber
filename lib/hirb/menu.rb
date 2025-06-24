@@ -81,7 +81,7 @@ module Hirb
     end
 
     def pre_prompt
-      prompt = ''
+      prompt = ::String.new
       prompt << "Default field: #{default_field}\n" if @options[:two_d] && default_field
       prompt << "Default command: #{@options[:command]}\n" if @options[:action] && @options[:command]
       prompt
