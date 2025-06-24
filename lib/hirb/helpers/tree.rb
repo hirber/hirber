@@ -7,24 +7,24 @@
 #        2
 #        3
 #      4
-# 
+#
 # * directory:
 #    0
 #    |-- 1
 #    |   |-- 2
 #    |   `-- 3
 #    `-- 4
-# 
+#
 # * number:
 #    1. 0
 #      1. 1
 #        1. 2
 #        2. 3
-#      2. 4 
-# 
+#      2. 4
+#
 # Tree nodes can be given as an array of arrays or an array of hashes.
 # To render the above basic tree with an array of hashes:
-#   Hirb::Helpers::Tree.render([{:value=>0, :level=>0}, {:value=>1, :level=>1}, {:value=>2, :level=>2}, 
+#   Hirb::Helpers::Tree.render([{:value=>0, :level=>0}, {:value=>1, :level=>1}, {:value=>2, :level=>2},
 #     {:value=>3, :level=>2}, {:value=>4, :level=>1}])
 # Note from the hash keys that :level refers to the depth of the tree while :value refers to the text displayed
 # for a node.
@@ -54,7 +54,7 @@ class Hirb::Helpers::Tree
 
   # :stopdoc:
   attr_accessor :nodes
-  
+
   def initialize(input_nodes, options={})
     @options = options
     @type = options[:type] || :basic
@@ -74,7 +74,7 @@ class Hirb::Helpers::Tree
     body += render_description if @options[:description]
     body
   end
-  
+
   def render_description
     "\n\n#{@nodes.length} #{@nodes.length == 1 ? 'node' : 'nodes'} in tree"
   end
@@ -97,7 +97,7 @@ class Hirb::Helpers::Tree
   def render_directory
     mark_last_nodes_per_level
     render_nodes {|e|
-      value = ''
+      value = ::String.new
       unless e.root?
         value << e.render_parent_characters
         value << (e[:last_node] ? "`-- " : "|-- ")
@@ -105,7 +105,7 @@ class Hirb::Helpers::Tree
       value
     }
   end
-  
+
   def render_number
     counter = {}
     @nodes.each {|e|
@@ -126,7 +126,7 @@ class Hirb::Helpers::Tree
       raise ParentlessNodeError if (e[:level] > e.previous[:level]) && (e[:level] - e.previous[:level]) > 1
     end
   end
-  
+
   # walks tree accumulating last nodes per unique parent+level
   def mark_last_nodes_per_level
     @nodes.each {|e| e.delete(:last_node)}
@@ -139,7 +139,7 @@ class Hirb::Helpers::Tree
   class Node < ::Hash #:nodoc:
     class MissingLevelError < StandardError; end
     class MissingValueError < StandardError; end
-    
+
     def initialize(hash)
       super
       raise MissingLevelError unless hash.has_key?(:level)
@@ -165,7 +165,7 @@ class Hirb::Helpers::Tree
 
     def root?; self[:level] == 0; end
 
-    # refers to characters which connect parent nodes 
+    # refers to characters which connect parent nodes
     def render_parent_characters
       parent_chars = []
       get_parents_character(parent_chars)
