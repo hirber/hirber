@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 # This helper wraps around the other table helpers i.e. Hirb::Helpers::Table while
 # providing default helper options via Hirb::DynamicView. Using these default options, this
 # helper supports views for the following modules/classes:

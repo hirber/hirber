@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 complete(:methods=>%w{Hirb::View.enable Hirb.enable}) {
   %w{config_file output_method output width height formatter pager pager_command}
 }

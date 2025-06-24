@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 module Hirb
   # A Formatter object formats an output object (using Formatter.format_output) into a string based on the views defined
   # for its class and/or ancestry.

@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 module Hirb::Views::Rails #:nodoc:
   def active_record__base_view(obj)
     {:fields=>get_active_record_fields(obj)}

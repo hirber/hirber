@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 # Creates a markdown table for github
 class Hirb::Helpers::MarkdownTable < Hirb::Helpers::Table
   CHARS = {

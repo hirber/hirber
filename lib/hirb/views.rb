@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 module Hirb
   # Namespace for Helpers defining multiple views in a module i.e. via DynamicView.
   module Views

@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 module Hirb
   module ObjectMethods
     # Takes same options as Hirb::View.render_output.

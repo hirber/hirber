@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 module Hirb
   # This class is responsible for managing all view-related functionality.
   #
