@@ -34,13 +34,21 @@ Gem::Specification.new do |s|
 
   s.add_development_dependency "rake"
   s.add_development_dependency "pry"
-  s.add_development_dependency "standardrb"
   s.add_development_dependency "rspec", ">= 3.9"
   s.add_development_dependency "rspec_junit_formatter"
   s.add_development_dependency "bacon", "~> 1.1"
   s.add_development_dependency "mocha", "~> 0.12.1"
   s.add_development_dependency "mocha-on-bacon", "~> 0.2.1"
   s.add_development_dependency "bacon-bits", "~> 0.1"
+
+  # For now we want to support Ruby 2.7, even though its EOL. In order to use
+  # modern dev tools, separate gemfile for development is used.
+  #
+  # BUNDLE_GEMFILE=Gemfile.dev bin/standardrb
+
+  if ENV["BUNDLE_GEMFILE"] == "Gemfile.dev"
+    s.add_development_dependency "standardrb"
+  end
 
   s.files =
     Dir.glob %w[
